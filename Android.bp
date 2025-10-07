@@ -162,6 +162,56 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.videotelephony@1.0-impl",
+    owner: "itel",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "libfmq",
+                "vendor.mediatek.hardware.videotelephony@1.0",
+                "libc",
+                "libutils",
+                "libcutils",
+                "liblog",
+                "libbase",
+                "libc++",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "libfmq",
+                "vendor.mediatek.hardware.videotelephony@1.0",
+                "libc",
+                "libutils",
+                "libcutils",
+                "liblog",
+                "libbase",
+                "libc++",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    relative_install_path: "hw",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libAVCSecureVencCA_510",
     owner: "itel",
     strip: {
@@ -334,6 +384,43 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "libc++",
                 "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libccci_util",
+    owner: "itel",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libccci_util.so",
+            ],
+            shared_libs: [
+                "libc",
+                "liblog",
+                "libc++",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libccci_util.so",
+            ],
+            shared_libs: [
+                "libc",
+                "liblog",
+                "libc++",
                 "libm",
                 "libdl",
             ],
@@ -1047,8 +1134,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.mediatek.hardware.videotelephony@1.0_vendor",
-    stem: "vendor.mediatek.hardware.videotelephony@1.0",
+    name: "vendor.mediatek.hardware.videotelephony@1.0",
     owner: "itel",
     strip: {
         none: true,
@@ -1312,6 +1398,35 @@ cc_prebuilt_library_shared {
     },
     compile_multilib: "32",
     check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "librcs_interface",
+    owner: "itel",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/librcs_interface.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libhardware",
+                "libhardware_legacy",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
     prefer: true,
     soc_specific: true,
 }
@@ -2091,7 +2206,6 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/hw/android.hardware.sensors@2.X-subhal-mediatek.so",
             ],
             shared_libs: [
-                "libshim_sensors",
                 "android.hardware.sensors@1.0",
                 "android.hardware.sensors@2.0",
                 "android.hardware.sensors@2.0-ScopedWakelock",
@@ -2877,14 +2991,13 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/hw/mt6789/vendor.mediatek.hardware.pq@2.15-impl.so",
             ],
             shared_libs: [
-                "libshim_sensors",
                 "libhidlbase-v32",
                 "libhidltransport",
                 "libhwbinder",
                 "libhardware",
                 "android.frameworks.sensorservice@1.0",
                 "android.hardware.sensors@1.0",
-                "libsensorndkbridge",
+                "android.hardware.sensors@1.0-convert-shared",
                 "liblog",
                 "libutils-v32",
                 "libcutils",
@@ -8177,31 +8290,6 @@ cc_prebuilt_library_shared {
                 "libmtkcutils",
                 "libc++",
                 "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libccci_util",
-    owner: "itel",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libccci_util.so",
-            ],
-            shared_libs: [
-                "libc",
-                "liblog",
-                "libc++",
                 "libm",
                 "libdl",
             ],
@@ -18046,7 +18134,6 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/mt6789/libaalservice.so",
             ],
             shared_libs: [
-                "libshim_sensors",
                 "libutils",
                 "libcutils",
                 "liblog",
@@ -18056,7 +18143,7 @@ cc_prebuilt_library_shared {
                 "libgralloc_extra",
                 "android.frameworks.sensorservice@1.0",
                 "android.hardware.sensors@1.0",
-                "libsensorndkbridge",
+                "android.hardware.sensors@1.0-convert-shared",
                 "libdrm",
                 "libc++",
                 "libc",
@@ -19653,7 +19740,6 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/mt6789/libcam.utils.sensorprovider.so",
             ],
             shared_libs: [
-                "libshim_sensors",
                 "liblog",
                 "libmtkcam_ulog",
                 "libutils",
@@ -19663,7 +19749,7 @@ cc_prebuilt_library_shared {
                 "android.hardware.sensors@1.0",
                 "libhidlbase",
                 "libhidltransport",
-                "libsensorndkbridge",
+                "android.hardware.sensors@1.0-convert-shared",
                 "libhardware",
                 "libmtkcam_modulehelper",
                 "libcamalgo.gyro",
@@ -27672,7 +27758,6 @@ cc_prebuilt_binary {
                 "proprietary/vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service",
             ],
             shared_libs: [
-                "libshim_sensors",
                 "libhidlbase-v32",
                 "libhidltransport",
                 "liblog",
@@ -27762,6 +27847,41 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
+    name: "vtservice_hidl",
+    owner: "itel",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/hw/vtservice_hidl",
+            ],
+            shared_libs: [
+                "libutils",
+                "libcutils",
+                "liblog",
+                "libbase",
+                "libfmq",
+                "vendor.mediatek.hardware.videotelephony@1.0",
+                "libhardware",
+                "libhwbinder",
+                "libhidlbase",
+                "libhidltransport",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    relative_install_path: "hw",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
     name: "kmsetkey_ca.trustonic",
     owner: "itel",
     target: {
@@ -27822,7 +27942,6 @@ cc_prebuilt_binary {
                 "proprietary/vendor/bin/mnld",
             ],
             shared_libs: [
-                "libshim_sensors",
                 "libmnl",
                 "libcurl",
                 "libcutils",
@@ -27839,7 +27958,7 @@ cc_prebuilt_binary {
                 "android.hardware.sensors@1.0",
                 "libhidlbase",
                 "libhidltransport",
-                "libsensorndkbridge",
+                "android.hardware.sensors@1.0-convert-shared",
                 "libc++",
                 "libc",
                 "libm",
@@ -27955,31 +28074,6 @@ cc_prebuilt_binary {
                 "libcrypto",
                 "libexpat",
                 "libssl",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "mtk_pkm_service",
-    owner: "itel",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/mtk_pkm_service",
-            ],
-            shared_libs: [
-                "liblog",
                 "libc++",
                 "libc",
                 "libm",

@@ -760,13 +760,12 @@ PRODUCT_COPY_FILES += \
     vendor/itel/S666LN/proprietary/vendor/etc/init/init.volte_md_status.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.volte_md_status.rc \
     vendor/itel/S666LN/proprietary/vendor/etc/init/init.volte_stack.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.volte_stack.rc \
     vendor/itel/S666LN/proprietary/vendor/etc/init/init.volte_ua.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.volte_ua.rc \
+    vendor/itel/S666LN/proprietary/vendor/etc/init/init.vtservice_hidl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vtservice_hidl.rc \
     vendor/itel/S666LN/proprietary/vendor/etc/init/init.wlan_drv.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.wlan_drv.rc \
     vendor/itel/S666LN/proprietary/vendor/etc/init/init.wmt_drv.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.wmt_drv.rc \
     vendor/itel/S666LN/proprietary/vendor/etc/init/init.wod.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.wod.rc \
     vendor/itel/S666LN/proprietary/vendor/etc/init/mtk_agpsd_p.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/mtk_agpsd_p.rc \
-    vendor/itel/S666LN/proprietary/vendor/etc/init/mtk_pkm_service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/mtk_pkm_service.rc \
     vendor/itel/S666LN/proprietary/vendor/etc/init/mtkrild.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/mtkrild.rc \
-    vendor/itel/S666LN/proprietary/vendor/etc/init/muxreport.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/muxreport.rc \
     vendor/itel/S666LN/proprietary/vendor/etc/init/netdagent.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/netdagent.rc \
     vendor/itel/S666LN/proprietary/vendor/etc/init/nvram_daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/nvram_daemon.rc \
     vendor/itel/S666LN/proprietary/vendor/etc/init/smartcharging_init.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/smartcharging_init.rc \
@@ -919,10 +918,12 @@ PRODUCT_PACKAGES += \
     AVCSecureVdecCA_510 \
     HEVCSecureVdecCA_510 \
     VP9SecureVdecCA_510 \
+    vendor.mediatek.hardware.videotelephony@1.0-impl \
     libAVCSecureVencCA_510 \
     libadpcmdec_mtk \
     libaedv \
     libbwc \
+    libccci_util \
     libgz_gp_client \
     libgz_uree \
     libhevce_sb.ca7.android \
@@ -941,7 +942,7 @@ PRODUCT_PACKAGES += \
     libwo \
     arm.graphics-V1-ndk_platform \
     libmtk_drvb \
-    vendor.mediatek.hardware.videotelephony@1.0_vendor \
+    vendor.mediatek.hardware.videotelephony@1.0 \
     libHEVCdec_sa.ca7.android \
     libh264dec_customize \
     libh264dec_sa.ca7 \
@@ -950,6 +951,7 @@ PRODUCT_PACKAGES += \
     libh264enc_sa.ca7 \
     libmp4enc_sa.ca7 \
     libmp4enc_xa.ca7 \
+    librcs_interface \
     librcs_volte_core \
     libthha \
     libvcodec_utility_plat.mt6789 \
@@ -1203,7 +1205,6 @@ PRODUCT_PACKAGES += \
     libcamera2ndk_vendor \
     libcares_naptr \
     libcarrierconfig \
-    libccci_util \
     libcmdl \
     libcmdl_ndk.mtk.vndk \
     libcodec2_mtk_c2store \
@@ -1852,6 +1853,7 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.pq@2.2-service \
     vendor.transsion.hardware.trancam.trancamserver@1.0-service \
     vendor.trustonic.tee@1.1-service \
+    vtservice_hidl \
     kmsetkey_ca.trustonic \
     mcDriverDaemon \
     mnld \
@@ -1859,7 +1861,6 @@ PRODUCT_PACKAGES += \
     jpegtool \
     v3avpud.mt6789 \
     mtk_agpsd \
-    mtk_pkm_service \
     netdagent \
     nvram_daemon \
     rcs_volte_stack \
