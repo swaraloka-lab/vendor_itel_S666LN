@@ -924,7 +924,6 @@ PRODUCT_PACKAGES += \
     VP9SecureVdecCA_510 \
     vendor.mediatek.hardware.videotelephony@1.0-impl \
     libAVCSecureVencCA_510 \
-    libaedv \
     libbwc \
     libccci_util \
     libgz_gp_client \
