@@ -8,6 +8,7 @@ soong_namespace {
         "hardware/mediatek",
         "hardware/mediatek/libmtkperf_client",
         "hardware/millennium",
+        "hardware/mediatek/libaedv",
     ],
 }
 
