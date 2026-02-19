@@ -787,7 +787,6 @@ PRODUCT_COPY_FILES += \
     vendor/itel/S666LN/proprietary/vendor/etc/init/vendor.trustonic.tee@1.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.trustonic.tee@1.1-service.rc \
     vendor/itel/S666LN/proprietary/vendor/etc/init/volte_clientapi_ua.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/volte_clientapi_ua.rc \
     vendor/itel/S666LN/proprietary/vendor/etc/init/wlan_assistant.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wlan_assistant.rc \
-    vendor/itel/S666LN/proprietary/vendor/etc/meow.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/meow.cfg \
     vendor/itel/S666LN/proprietary/vendor/etc/mtk_platform_codecs_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mtk_platform_codecs_config.xml \
     vendor/itel/S666LN/proprietary/vendor/etc/nnapi_powerhal.json:$(TARGET_COPY_OUT_VENDOR)/etc/nnapi_powerhal.json \
     vendor/itel/S666LN/proprietary/vendor/etc/slp_conf:$(TARGET_COPY_OUT_VENDOR)/etc/slp_conf \
@@ -975,11 +974,6 @@ PRODUCT_PACKAGES += \
     APUWareApusysServer \
     APUWareHmpServer \
     APUWareUtilsServer \
-    libGLES_meow \
-    libMEOW_data \
-    libMEOW_gift \
-    libMEOW_qt \
-    libMEOW_trace \
     libGLES_mali \
     android.hardware.gnss-impl-mediatek \
     android.hardware.gnss@2.1-impl-mediatek \
@@ -1137,12 +1131,9 @@ PRODUCT_PACKAGES += \
     libCamera_s5kjn1mipiraw_Video_720P \
     libCamera_s5kjn1mipiraw_Video_Zoom1 \
     libCamera_s5kjn1mipiraw_Video_Zoom2 \
-    libDefaultFpsActor \
-    libFrameRecord \
     libJpgEncPipe \
     libMcClient \
     libMtkSpeechEnh \
-    libNoFpsActor \
     libOpenCL \
     libSQLiteModule_VER_ALL \
     libTEECommon \
