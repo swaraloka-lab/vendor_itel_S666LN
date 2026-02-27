@@ -27956,23 +27956,6 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-	name: "em_hidl",
-	owner: "itel",
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/bin/em_hidl"],
-		},
-	},
-	compile_multilib: "64",
-	check_elf_files: false,
-	strip: {
-		none: true,
-	},
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_binary {
     name: "chg_sence",
     owner: "itel",
     target: {
@@ -27998,6 +27981,23 @@ cc_prebuilt_binary {
     },
     prefer: true,
     soc_specific: true,
+}
+
+cc_prebuilt_binary {
+	name: "em_hidl",
+	owner: "itel",
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/bin/em_hidl"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	strip: {
+		none: true,
+	},
+	prefer: true,
+	soc_specific: true,
 }
 
 cc_prebuilt_binary {
@@ -28059,11 +28059,12 @@ cc_prebuilt_binary {
     name: "gsm0710muxd",
     owner: "itel",
     target: {
-        android_arm: {
+        android_arm64: {
             srcs: [
                 "proprietary/vendor/bin/gsm0710muxd",
             ],
             shared_libs: [
+                "libcutils",
                 "libmtkcutils",
                 "libmtkrillog",
                 "libmtkproperty",
@@ -28075,7 +28076,7 @@ cc_prebuilt_binary {
             ],
         },
     },
-    compile_multilib: "32",
+    compile_multilib: "64",
     strip: {
         none: true,
     },
