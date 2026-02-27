@@ -1845,6 +1845,7 @@ PRODUCT_PACKAGES += \
     libnir_neon_driver_ndk.mtk \
     libtflite_mtk.mtk \
     libtflite_mtk \
+    vendor.mediatek.hardware.apuware.apusys-V1-ndk \
     vendor.mediatek.hardware.apuware.apusys@1.0 \
     vendor.mediatek.hardware.apuware.apusys@2.0 \
     vendor.mediatek.hardware.apuware.apusys@2.1 \
