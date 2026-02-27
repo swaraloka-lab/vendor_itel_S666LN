@@ -8,6 +8,7 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_COPY_FILES += \
     vendor/itel/S666LN/proprietary/lib/libem_support_jni.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libem_support_jni.so \
     vendor/itel/S666LN/proprietary/lib64/libem_support_jni.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libem_support_jni.so \
+    vendor/itel/S666LN/proprietary/system/etc/public.libraries-mtk.txt:$(TARGET_COPY_OUT_SYSTEM)/etc/public.libraries-mtk.txt \
     vendor/itel/S666LN/proprietary/vendor/app/mcRegistry/020f0000000000000000000000000000.drbin:$(TARGET_COPY_OUT_VENDOR)/app/mcRegistry/020f0000000000000000000000000000.drbin \
     vendor/itel/S666LN/proprietary/vendor/app/mcRegistry/020f0000000000000000000000000000.tlbin:$(TARGET_COPY_OUT_VENDOR)/app/mcRegistry/020f0000000000000000000000000000.tlbin \
     vendor/itel/S666LN/proprietary/vendor/app/mcRegistry/031c0000000000000000000000000000.drbin:$(TARGET_COPY_OUT_VENDOR)/app/mcRegistry/031c0000000000000000000000000000.drbin \
@@ -922,10 +923,9 @@ PRODUCT_PACKAGES += \
     AVCSecureVdecCA_510 \
     HEVCSecureVdecCA_510 \
     VP9SecureVdecCA_510 \
-    vendor.mediatek.hardware.videotelephony@1.0-impl \
+    vendor.mediatek.hardware.videotelephony@1.0-impl_vendor \
     libAVCSecureVencCA_510 \
     libbwc \
-    libccci_util \
     libgz_gp_client \
     libgz_uree \
     libhevce_sb.ca7.android \
@@ -934,9 +934,6 @@ PRODUCT_PACKAGES += \
     libion_ulit \
     libipsec_ims_shr \
     libladder \
-    libmtkcutils \
-    libmtkproperty \
-    libmtkrillog \
     libthha \
     libvcodec_oal \
     libvcodecdrv_header_stub \
@@ -1201,6 +1198,7 @@ PRODUCT_PACKAGES += \
     libcamera2ndk_vendor \
     libcares_naptr \
     libcarrierconfig \
+    libccci_util \
     libcmdl \
     libcmdl_ndk.mtk.vndk \
     libcodec2_mtk_c2store \
@@ -1258,6 +1256,7 @@ PRODUCT_PACKAGES += \
     libmtkcam_pipelinepolicy-aov \
     libmtkconfig \
     libmtkconfigutils \
+    libmtkcutils \
     libmtkhardware_legacy \
     libmtkisp_metadata \
     libmtkisp_metadata_v2 \
@@ -1265,6 +1264,8 @@ PRODUCT_PACKAGES += \
     libmtkmipc-ril \
     libmtknetcap \
     libmtknetutils \
+    libmtkproperty \
+    libmtkrillog \
     libmtkrilutils \
     libmtkshifter_vendor \
     libmtksysutils \
@@ -1285,7 +1286,7 @@ PRODUCT_PACKAGES += \
     libmvpu_runtime_pub \
     libmvpuop_mtk_cv \
     libmvpuop_mtk_nn \
-    libneuron_graph_delegate.mtk \
+    libneuron_graph_delegate.mtk_vendor \
     libnir_neon_driver_ndk.mtk.vndk \
     libnpagent \
     libnpagent_server \
@@ -1307,7 +1308,7 @@ PRODUCT_PACKAGES += \
     libspeechparser_vendor \
     libstorage_otp \
     libsysenv \
-    libtflite_mtk \
+    libtflite_mtk_vendor \
     libtlcWidevineModularDrm \
     libtneclient \
     libtrancamJsonConvertor \
@@ -1742,10 +1743,10 @@ PRODUCT_PACKAGES += \
     s5k2lqsx_mipi_raw_IdxMgr \
     s5k4h7_mipi_raw_IdxMgr \
     vendor.fpsensor.hardware.fpsensorhidlsvc@2.0 \
-    vendor.mediatek.hardware.apuware.apusys@2.0 \
-    vendor.mediatek.hardware.apuware.apusys@2.1 \
-    vendor.mediatek.hardware.apuware.hmp@1.0 \
-    vendor.mediatek.hardware.apuware.utils@2.0 \
+    vendor.mediatek.hardware.apuware.apusys@2.0_vendor \
+    vendor.mediatek.hardware.apuware.apusys@2.1_vendor \
+    vendor.mediatek.hardware.apuware.hmp@1.0_vendor \
+    vendor.mediatek.hardware.apuware.utils@2.0_vendor \
     vendor.mediatek.hardware.audio@7.1 \
     vendor.mediatek.hardware.camera.atms@1.0 \
     vendor.mediatek.hardware.camera.bgservice@1.0 \
@@ -1803,6 +1804,55 @@ PRODUCT_PACKAGES += \
     vendor.trustonic.tee.tui@1.0 \
     vendor.trustonic.tee@1.0 \
     vendor.trustonic.tee@1.1 \
+    libapuwareapusys.mtk \
+    libapuwareapusys_v2.mtk \
+    libapuwarehmp.mtk \
+    libapuwareutils.mtk \
+    libapuwareutils_v2.mtk \
+    libapuwarexrp.mtk \
+    libapuwarexrp_v2.mtk \
+    libarmnn_ndk.mtk \
+    libcmdl_ndk.mtk \
+    libmvpu_cic_ci_compiler.mtk \
+    libmvpu_cic_ci_compiler_25.mtk \
+    libmvpu_clc_14_mvpu_debuginfo_25.mtk \
+    libmvpu_clc_14_mvpu_elf_25.mtk \
+    libmvpu_clc_14_mvpu_utility_25.mtk \
+    libmvpu_clc_mvpu_debuginfo.mtk \
+    libmvpu_clc_mvpu_elf.mtk \
+    libmvpu_clc_mvpu_utility.mtk \
+    libmvpu_config.mtk \
+    libmvpu_engine.mtk \
+    libmvpu_engine_25.mtk \
+    libmvpu_engine_25_pub.mtk \
+    libmvpu_engine_pub.mtk \
+    libmvpu_pattern.mtk \
+    libmvpu_pattern_25.mtk \
+    libmvpu_pattern_25_pub.mtk \
+    libmvpu_pattern_pub.mtk \
+    libmvpu_runtime.mtk \
+    libmvpu_runtime_25.mtk \
+    libmvpu_runtime_25_pub.mtk \
+    libmvpu_runtime_builtin.mtk \
+    libmvpu_runtime_builtin_25.mtk \
+    libmvpu_runtime_pub.mtk \
+    libmvpuop25_mtk_cv.mtk \
+    libmvpuop25_mtk_nn.mtk \
+    libmvpuop_mtk_cv.mtk \
+    libmvpuop_mtk_nn.mtk \
+    libneuron_graph_delegate.mtk \
+    libneuronusdk_adapter.mtk \
+    libnir_neon_driver_ndk.mtk \
+    libtflite_mtk.mtk \
+    libtflite_mtk \
+    vendor.mediatek.hardware.apuware.apusys@1.0 \
+    vendor.mediatek.hardware.apuware.apusys@2.0 \
+    vendor.mediatek.hardware.apuware.apusys@2.1 \
+    vendor.mediatek.hardware.apuware.hmp@1.0 \
+    vendor.mediatek.hardware.apuware.utils@1.0 \
+    vendor.mediatek.hardware.apuware.utils@2.0 \
+    vendor.mediatek.hardware.apuware.xrp@1.0 \
+    vendor.mediatek.hardware.apuware.xrp@2.0 \
     android.hardware.biometrics.fingerprint@2.1-service.xml \
     android.hardware.neuralnetworks-shim-service-mtk.xml \
     android.hardware.security.keymint-service.trustonic.xml \
