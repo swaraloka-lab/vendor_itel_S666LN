@@ -174,8 +174,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.mediatek.hardware.videotelephony@1.0-impl_vendor",
-    stem: "vendor.mediatek.hardware.videotelephony@1.0-impl",
+    name: "vendor.mediatek.hardware.videotelephony@1.0-impl",
     owner: "itel",
     strip: {
         none: true,
@@ -971,7 +970,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.mediatek.hardware.videotelephony@1.0",
+    name: "vendor.mediatek.hardware.videotelephony@1.0_vendor",
+    stem: "vendor.mediatek.hardware.videotelephony@1.0",
     owner: "itel",
     strip: {
         none: true,
