@@ -6,8 +6,6 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/itel/S666LN
 
 PRODUCT_COPY_FILES += \
-    vendor/itel/S666LN/proprietary/lib/libem_support_jni.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libem_support_jni.so \
-    vendor/itel/S666LN/proprietary/lib64/libem_support_jni.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libem_support_jni.so \
     vendor/itel/S666LN/proprietary/system/etc/public.libraries-mtk.txt:$(TARGET_COPY_OUT_SYSTEM)/etc/public.libraries-mtk.txt \
     vendor/itel/S666LN/proprietary/vendor/app/mcRegistry/020f0000000000000000000000000000.drbin:$(TARGET_COPY_OUT_VENDOR)/app/mcRegistry/020f0000000000000000000000000000.drbin \
     vendor/itel/S666LN/proprietary/vendor/app/mcRegistry/020f0000000000000000000000000000.tlbin:$(TARGET_COPY_OUT_VENDOR)/app/mcRegistry/020f0000000000000000000000000000.tlbin \
@@ -37,7 +35,6 @@ PRODUCT_COPY_FILES += \
     vendor/itel/S666LN/proprietary/vendor/app/mcRegistry/ce4550edbcb1662566b006ebcb303050.tabin:$(TARGET_COPY_OUT_VENDOR)/app/mcRegistry/ce4550edbcb1662566b006ebcb303050.tabin \
     vendor/itel/S666LN/proprietary/vendor/app/mcRegistry/df1edda8627911e980ae507b9d9a7e7d.tabin:$(TARGET_COPY_OUT_VENDOR)/app/mcRegistry/df1edda8627911e980ae507b9d9a7e7d.tabin \
     vendor/itel/S666LN/proprietary/vendor/app/mcRegistry/e97c270ea5c44c58bcd3384a2fa2539e.tabin:$(TARGET_COPY_OUT_VENDOR)/app/mcRegistry/e97c270ea5c44c58bcd3384a2fa2539e.tabin \
-    vendor/itel/S666LN/proprietary/vendor/bin/em_hidl:$(TARGET_COPY_OUT_VENDOR)/bin/em_hidl \
     vendor/itel/S666LN/proprietary/vendor/data/camera/lut/colorEnhance/bg_lut/0.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/colorEnhance/bg_lut/0.txt \
     vendor/itel/S666LN/proprietary/vendor/data/camera/lut/colorEnhance/bg_lut/1.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/colorEnhance/bg_lut/1.txt \
     vendor/itel/S666LN/proprietary/vendor/data/camera/lut/colorEnhance/bg_lut/10.txt:$(TARGET_COPY_OUT_VENDOR)/data/camera/lut/colorEnhance/bg_lut/10.txt \
@@ -322,6 +319,11 @@ PRODUCT_COPY_FILES += \
     vendor/itel/S666LN/proprietary/vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_Test_SIM1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/carrier/agps_profiles_conf2_carrier_Test_SIM1.xml \
     vendor/itel/S666LN/proprietary/vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_Test_SIM2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/carrier/agps_profiles_conf2_carrier_Test_SIM2.xml \
     vendor/itel/S666LN/proprietary/vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_Verizon_Wireless.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/carrier/agps_profiles_conf2_carrier_Verizon_Wireless.xml \
+    vendor/itel/S666LN/proprietary/vendor/etc/gralloc/cam.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/cam.xml \
+    vendor/itel/S666LN/proprietary/vendor/etc/gralloc/dpu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/dpu.xml \
+    vendor/itel/S666LN/proprietary/vendor/etc/gralloc/dpu_aeu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/dpu_aeu.xml \
+    vendor/itel/S666LN/proprietary/vendor/etc/gralloc/gpu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/gpu.xml \
+    vendor/itel/S666LN/proprietary/vendor/etc/gralloc/vpu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/vpu.xml \
     vendor/itel/S666LN/proprietary/vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc \
     vendor/itel/S666LN/proprietary/vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.4-service.widevine.rc \
     vendor/itel/S666LN/proprietary/vendor/etc/init/android.hardware.gnss-service.mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gnss-service.mediatek.rc \
@@ -373,6 +375,7 @@ PRODUCT_COPY_FILES += \
     vendor/itel/S666LN/proprietary/vendor/etc/init/vendor.trustonic.tee@1.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.trustonic.tee@1.1-service.rc \
     vendor/itel/S666LN/proprietary/vendor/etc/init/volte_clientapi_ua.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/volte_clientapi_ua.rc \
     vendor/itel/S666LN/proprietary/vendor/etc/init/wlan_assistant.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wlan_assistant.rc \
+    vendor/itel/S666LN/proprietary/vendor/etc/mali_platform.config:$(TARGET_COPY_OUT_VENDOR)/etc/mali_platform.config \
     vendor/itel/S666LN/proprietary/vendor/etc/mtk_platform_codecs_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mtk_platform_codecs_config.xml \
     vendor/itel/S666LN/proprietary/vendor/etc/nnapi_powerhal.json:$(TARGET_COPY_OUT_VENDOR)/etc/nnapi_powerhal.json \
     vendor/itel/S666LN/proprietary/vendor/etc/slp_conf:$(TARGET_COPY_OUT_VENDOR)/etc/slp_conf \
@@ -504,7 +507,6 @@ PRODUCT_COPY_FILES += \
     vendor/itel/S666LN/proprietary/vendor/lib/egl/egl.cfg:$(TARGET_COPY_OUT_VENDOR)/lib/egl/egl.cfg
 
 PRODUCT_PACKAGES += \
-    EngineerMode \
     AVCSecureVdecCA_510 \
     HEVCSecureVdecCA_510 \
     VP9SecureVdecCA_510 \
@@ -526,10 +528,6 @@ PRODUCT_PACKAGES += \
     libwo \
     arm.graphics-V1-ndk_platform \
     libmtk_drvb \
-    vendor.mediatek.hardware.engineermode@1.0 \
-    vendor.mediatek.hardware.engineermode@1.1 \
-    vendor.mediatek.hardware.engineermode@1.2 \
-    vendor.mediatek.hardware.engineermode@1.3 \
     vendor.mediatek.hardware.videotelephony@1.0_vendor \
     libHEVCdec_sa.ca7.android \
     libh264dec_customize \
@@ -738,6 +736,8 @@ PRODUCT_PACKAGES += \
     libapu_mdw_batch \
     libapusys \
     libapusys_edma \
+    libarm_egl_properties_sysprop \
+    libarm_gralloc_properties_sysprop \
     libarmnn \
     libarmnn_ndk.mtk.vndk \
     libasn1c_core \
@@ -827,6 +827,7 @@ PRODUCT_PACKAGES += \
     libjpeg-alpha_vendor \
     libkmsetkey \
     libksensor \
+    liblibarm_mali_config_sysprops \
     libmipc \
     libmml \
     libmmprofile \
@@ -897,7 +898,6 @@ PRODUCT_PACKAGES += \
     libtneclient \
     libtrancamJsonConvertor \
     libtrancam_filelockmgr \
-    libtranlog \
     libtranslator_mapi_v3.0 \
     libtranslator_mdmi_v2.8.2 \
     libtranslator_utils \
@@ -919,6 +919,7 @@ PRODUCT_PACKAGES += \
     libvpu5 \
     libwpfa \
     libwvhidl \
+    arm.graphics-V3-ndk \
     fake_serial_yuv_IdxMgr \
     fake_serial_yuv_tuning \
     gc08a8_mipi_raw_IdxMgr \
@@ -1382,8 +1383,6 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.pq@2.8 \
     vendor.mediatek.hardware.pq@2.9 \
     vendor.transsion.hardware.trancam.trancamserver@1.0 \
-    vendor.transsion.hardware.tranlog@1.0 \
-    vendor.transsion.hardware.tranlogconfig@1.0 \
     vendor.trustonic.tee.tui@1.0 \
     vendor.trustonic.tee@1.0 \
     vendor.trustonic.tee@1.1 \
@@ -1455,7 +1454,6 @@ PRODUCT_PACKAGES += \
     ccci_mdinit \
     ccci_rpcd \
     chg_sence \
-    em_hidl \
     fuelgauged \
     fuelgauged_nvram \
     gsm0710muxd \
@@ -1522,6 +1520,7 @@ PRODUCT_PACKAGES += \
     vendor_lib64_hw_vulkan_mali_so \
     vendor_lib64_hw_sensors_mt6789_so \
     vendor_lib64_arm_graphics-V1-ndk_platform_so \
+    vendor_lib64_arm_graphics-V3-ndk_so \
     vendor_lib64_libDR_so \
     vendor_lib64_libaal_cust_func_so \
     vendor_lib64_libaalservice_so \
