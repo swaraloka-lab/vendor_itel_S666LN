@@ -27962,6 +27962,31 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
+    name: "epdg_wod",
+    owner: "itel",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/epdg_wod",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libwo",
+                "libc",
+                "libdl",
+                "libm",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
     name: "fuelgauged",
     owner: "itel",
     target: {
