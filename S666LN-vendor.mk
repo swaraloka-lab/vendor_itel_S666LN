@@ -1462,6 +1462,7 @@ PRODUCT_PACKAGES += \
     ccci_rpcd \
     chg_sence \
     em_hidl \
+    epdg_wod \
     fuelgauged \
     fuelgauged_nvram \
     gsm0710muxd \
